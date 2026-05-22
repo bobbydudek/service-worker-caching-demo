@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Service Worker Cache demo</title>
+	<link rel="stylesheet" href="custom.css">
+</head>
+<body>
+	<main class="app-shell">
+		<section class="hero">
+			<p class="eyebrow">Browser cache, but programmable</p>
+			<h1>Service Worker Cache Demo</h1>
+			<p>
+				This page registers a service worker, pre-caches local files, and serves them
+				back from cache when the network is unavailable.
+			</p>
+		</section>
+
+		<section class="status-panel" aria-live="polite">
+			<div>
+				<span class="label">Service worker</span>
+				<strong id="worker-status">Checking support...</strong>
+			</div>
+			<div>
+				<span class="label">Network</span>
+				<strong id="network-status">Checking...</strong>
+			</div>
+		</section>
+
+		<section class="demo-grid">
+			<article class="demo-card">
+				<h2>What gets cached?</h2>
+				<p>The service worker saves this HTML file, the CSS file, and the JavaScript file.</p>
+				<ul id="cached-files"></ul>
+			</article>
+
+			<article class="demo-card">
+				<h2>Try it</h2>
+				<p>
+					Load this page once, then turn off your network in DevTools or your system settings.
+					Refresh the page and it should still work.
+				</p>
+				<button id="refresh-cache" type="button">Refresh cache</button>
+			</article>
+		</section>
+	</main>
+
+	<script src="custom.js"></script>
+</body>
+</html>

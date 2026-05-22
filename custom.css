@@ -1,0 +1,122 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: #f5f7f2;
+	color: #1e2420;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-shell {
+	width: min(960px, calc(100% - 32px));
+	margin: 0 auto;
+	padding: 56px 0;
+}
+
+.hero {
+	margin-bottom: 28px;
+}
+
+.eyebrow,
+.label {
+	color: #4b6656;
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-transform: uppercase;
+}
+
+h1 {
+	margin: 8px 0 12px;
+	font-size: clamp(2rem, 6vw, 4rem);
+	line-height: 1;
+}
+
+h2 {
+	margin: 0 0 12px;
+	font-size: 1.2rem;
+}
+
+p {
+	max-width: 68ch;
+	line-height: 1.6;
+}
+
+.status-panel,
+.demo-grid {
+	display: grid;
+	gap: 16px;
+}
+
+.status-panel {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	margin-bottom: 16px;
+}
+
+.status-panel > div,
+.demo-card {
+	border: 1px solid #d4ddd2;
+	border-radius: 8px;
+	background: #ffffff;
+	box-shadow: 0 14px 40px rgba(42, 65, 48, 0.08);
+}
+
+.status-panel > div {
+	padding: 16px;
+}
+
+.status-panel strong {
+	display: block;
+	margin-top: 6px;
+	font-size: 1.05rem;
+}
+
+.demo-grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.demo-card {
+	padding: 22px;
+}
+
+ul {
+	margin: 16px 0 0;
+	padding-left: 20px;
+	line-height: 1.8;
+}
+
+button {
+	min-height: 44px;
+	margin-top: 10px;
+	border: 0;
+	border-radius: 8px;
+	background: #1f6f53;
+	color: #ffffff;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 700;
+	padding: 0 18px;
+}
+
+button:hover {
+	background: #185941;
+}
+
+button:disabled {
+	background: #8b9a91;
+	cursor: wait;
+}
+
+@media (max-width: 700px) {
+	.app-shell {
+		padding: 36px 0;
+	}
+
+	.status-panel,
+	.demo-grid {
+		grid-template-columns: 1fr;
+	}
+}
